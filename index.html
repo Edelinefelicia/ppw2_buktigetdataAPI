@@ -51,8 +51,9 @@
             // Clear existing content
             bookList.innerHTML = "";
 
-            if (data.success && data.data.data.length > 0) {
-              data.data.data.forEach((book) => {
+            $thedata = data.data.data;
+            if (data.success && $thedata.length > 0) {
+              $thedata.forEach((book) => {
                 const bookItem = document.createElement("div");
                 bookItem.classList.add("styled-hr");
                 bookItem.innerHTML = `
